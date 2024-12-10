@@ -1,0 +1,201 @@
+/* general css */
+html {
+  --color: #ff690b;
+  --borderColor: rgb(98, 98, 98);
+}
+
+main {
+  background-color: rgb(33, 33, 33);
+  height: 100vh;
+  color: beige;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+input {
+  border: none;
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--color);
+  border-radius: 0.5rem !important;
+  border: none;
+  padding: 0.8rem;
+  color: beige;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background-color: #5b5b5b;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+button:disabled {
+  background-color: #d68c5d;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* JoinForm styling */
+
+.container {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.join-form {
+  width: 40vw;
+  margin: 0 auto;
+  border: 1px solid var(--borderColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+/* ChatRoom styling */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  gap: 2rem;
+  width: auto;
+  border-bottom: 1px solid var(--borderColor);
+  background-color: rgb(49, 49, 49);
+}
+
+.header > div {
+  justify-self: center;
+  padding: 0.5rem;
+}
+
+.users-container {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  gap: 0.5rem;
+  font-size: small;
+  color: var(--color);
+}
+
+.users-container > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: scroll;
+}
+
+.msg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  text-decoration: none;
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  height: 62vh;
+  overflow: scroll;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.msg-container > div > span > small {
+  text-align: start;
+  display: block;
+}
+
+.msg-container > div > small {
+  text-align: center;
+  display: block;
+}
+
+.form-container {
+  width: 100%;
+  padding-bottom: 6rem;
+}
+
+.msg-container span {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.outlined {
+  border: 1px solid var(--color);
+  background-color: "black";
+}
+
+.filled {
+  background-color: var(--color);
+}
+
+.small {
+  font-size: x-small;
+  margin-bottom: 5px;
+}
+
+.msg-form {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.msg-form input {
+  width: 100%;
+}
+
+.bottom-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-section > div {
+  min-height: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .join-form {
+    width: 80vw;
+  }
+  .msg-container {
+    height: 67vh;
+    width: auto;
+    margin: 2rem 1rem;
+    padding: 0;
+  }
+  .msg-form {
+    width: 90vw;
+  }
+  .form-container {
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+}
